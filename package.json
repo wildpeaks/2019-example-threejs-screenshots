@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "screenshots",
+  "description": "Creates screenshots of Three.js examples",
+  "engines": {
+    "node": ">=7.0.0"
+  },
+  "scripts": {
+    "test:setup": "webdriver-manager update",
+    "test:run": "protractor protractor.conf.js",
+    "test": "npm run test:setup && npm run test:run"
+  },
+  "devDependencies": {
+    "protractor": "^5.0.0",
+    "rimraf": "^2.5.4"
+  }
+}
