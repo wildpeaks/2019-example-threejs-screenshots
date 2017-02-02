@@ -5,13 +5,19 @@
   "engines": {
     "node": ">=7.0.0"
   },
+  "eslintConfig": {
+    "extends": "@wildpeaks/commonjs"
+  },
   "scripts": {
+    "test:eslint": "eslint src",
     "test:setup": "webdriver-manager update",
     "test:run": "protractor protractor.conf.js",
-    "test": "npm run test:setup && npm run test:run"
+    "test": "npm run test:eslint && npm run test:setup && npm run test:run"
   },
   "devDependencies": {
+    "eslint": "3.14.1",
     "protractor": "^5.0.0",
-    "rimraf": "^2.5.4"
+    "rimraf": "^2.5.4",
+    "@wildpeaks/eslint-config-commonjs": "1.1.0"
   }
 }
