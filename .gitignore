@@ -15,6 +15,7 @@
 !.eslintrc.json
 !.gitattributes
 !.gitignore
+!.npmrc
 !README.md
 !/test
 !/package.json
