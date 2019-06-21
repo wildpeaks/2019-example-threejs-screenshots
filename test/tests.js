@@ -351,7 +351,7 @@ describe('Three.js examples', () => {
 			browser.sleep(2500);
 			browser.takeScreenshot().then(data => {
 				const stream = fs.createWriteStream(path.join(__dirname, `screenshots/${id}.png`));
-				stream.write(new Buffer(data, 'base64'));
+				stream.write(Buffer.from(data, 'base64'));
 				stream.end();
 			});
 		});
